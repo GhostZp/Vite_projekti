@@ -1,6 +1,6 @@
 const getEntries = async () => {
   const url = 'http://localhost:3000/api/entries';
-  const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo4LCJ1c2VybmFtZSI6Im5ld3VzZXJuYW1lMiIsInBhc3N3b3JkIjoiJDJhJDEwJGtscUN2Qno5cE9kZFFpbDYxTG9mT3V6U1I3RjhsdGpSek1yQUlGb0xnblIyOEJITzh3bzdPIiwiZW1haWwiOiJuZXdlbWFpbDJAZXhhbXBsZS5jb20iLCJjcmVhdGVkX2F0IjoiMjAyNS0wMi0xN1QxMToxMDo1NC4wMDBaIiwidXNlcl9sZXZlbCI6InJlZ3VsYXIiLCJpYXQiOjE3Mzk3OTA2NjUsImV4cCI6MTczOTg3NzA2NX0.PsmMxSfjvhbkCnTxyMWCxlzfFvDOuUOs9bFjYsrwJik'; // Replace with your actual token
+  const token = ''; // Replace with your actual token
 
   // Make the request with the Authorization header
   const response = await fetch(url, {

@@ -10,36 +10,13 @@
     <div id="app"></div>
 
     <main>
-      <h3>Yksittäisen userin tietojen haku ID:n perusteella</h3>
-
-      <p>
-        Hae ID:n perusteella userin tiedot omasta backendistä ja printtaa tulos konsoliin.
-      </p>
-
-      <pre>GET http://localhost:3000/api/user/:id </pre>
-
-
-      <form class="idform">
-            <label for="userid">User ID</label>
-            <input
-              id="userid"
-              type="text"
-              name="idplace"
-              placeholder="Users ID"
-            />
-            <input
-              name="submit"
-              type="submit"
-              value="Find User"
-              class="idformpost"
-            />
-          </form>
-
       <h3>console.log harjoitukset</h3>
 
       <p>
         Hae kaikki items tiedot omasta backendistä ja printtaa tulos konsoliin
       </p>
+
+      <ul class="testlist"></ul>
 
       <pre>GET http://localhost:3000/api/items </pre>
       <button class="get_items">Get all items</button>
@@ -104,7 +81,7 @@
                 <th>ID</th>
               </tr>
             </thead>
-            <tbody id='taulukko'  class="tbody">
+            <tbody id="taulukko" class="tbody">
               <!-- tänne haetaan kaikki käyttäjät -->
               <!-- # Get all users -->
               <!-- GET http://127.0.0.1:3000/api/users -->
@@ -165,9 +142,43 @@
         </div>
       </div>
 
-      <!-- The actual snackbar -->
-      <div id="snackbar">Some text some message..</div>
+      <h3>Flexboxilla tehdyt kortit - Runko</h3>
+      <!-- kortit sisältävä flex parent -->
+      <section class="card-area">
+        <!-- yksittäinen kortti -->
+        <div class="parent">
+          <!-- vasen puoli jossa kuva -->
+          <div class="child-left">
+            <img src="/src/img/Diarypink.png" class="Book" alt="Diary"/>
+          </div>
+
+          <!-- oikea puoli jossa päiväkirjamerkintä-->
+          <div class="child-right">
+            <!-- tänne myös flexbox rakenne -->
+            Tänne dataa
+          </div>
+        </div>
+      </section>
+
+      <h3>Flexboxilla tehty kortti + Fetch + Itse luodut elementit</h3>
+
+      <button class="get_entries">Hae päiväkirjamerkinnät</button>
+      <section class="card-area2"></section>
+
     </main>
+
+    <!-- The actual snackbar -->
+    <div id="snackbar">Some text some message..</div>
+
+    <dialog class="info_dialog">
+      <p>
+        <!-- tähän täytetään käyttäjän tiedot -->
+        <!-- # Get user by id -->
+        <!-- GET http://127.0.0.1:3000/api/users/1 -->
+        <!---->
+      </p>
+      <button autofocus>Close</button>
+    </dialog>
 
     <script type="module" src="/src/js/main.js"></script>
   </body>
